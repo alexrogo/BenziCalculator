@@ -138,12 +138,22 @@ export const head: DocumentHead = {
   links: [
     {
       rel: "icon",
-      type: "image/x-icon",
-      href: "/favicon.ico", // Pfad zu deinem Favicon
+      href: "/icon.svg", // Pfad zu deinem SVG-Icon
+      type: "image/svg+xml",
+    },
+    {
+      rel: "icon",
+      href: "/android-chrome-192x192.png", // Fallback für Browser, die SVG nicht unterstützen
+      type: "image/png",
+      sizes: "192x192",
     },
     {
       rel: "apple-touch-icon",
-      href: "/favicon.ico", // Optional für iOS
+      href: "/apple-touch-icon.png", // Speziell für iOS
+    },
+    {
+      rel: "manifest",
+      href: "/manifest.json", // Verweis auf deine manifest.json
     },
   ],
 };
