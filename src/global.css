@@ -16,6 +16,21 @@ body {
     height: auto; /* Höhe proportional zur Breite */
     margin: 0 auto; /* Zentriert */
   }
+
+  /* Gesamt-Wrapper für dynamische Inhalte */
+.dynamic-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 250px; /* Platz für Fact, Button und Quelle */
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1); /* Optionaler Hintergrund */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optionaler Schatten */
+  }
+  
   
   .landing-container {
     display: flex;
@@ -45,10 +60,77 @@ body {
     color: #007b83;
   }
   
-  .hero-subtitle {
-    font-size: 1rem;
-    color: #666;
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 10px;
+  margin-bottom: 10px; /* Weniger Platz unter dem Subtitle */
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  font-style: italic;
+}
+  .hero-subtitle::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    margin: 10px auto 0;
+    background-color: #007b83; /* Gleiche Farbe wie die Hero-Titel */
+    border-radius: 2px; /* Runde Ecken */
   }
+
+  
+/* Wrapper für Fact Box */
+.fact-box-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 80%;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    min-height: 120px; /* Feste Mindesthöhe für konsistente Layoutgröße */
+    transition: min-height 0.3s ease; /* Weicher Übergang */
+  }
+  
+  /* Aktualisierte Fact Box */
+  .fact-box {
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #007b83;
+    background-color: rgba(255, 255, 255, 0);
+    word-wrap: break-word; /* Lange Wörter umbrechen */
+    overflow: hidden; /* Kein Überlaufen bei langen Texten */
+  }
+  
+
+  
+  /* Spinner */
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1); /* Leicht grauer Rahmen */
+    border-top: 4px solid #007b83; /* Akzentfarbe */
+    border-radius: 50%; /* Rundes Design */
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite; /* Drehende Animation */
+    margin: auto;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
   
   /* Call-to-Action Button */
   .cta-section {
@@ -72,10 +154,46 @@ body {
     transform: scale(1.05);
   }
   
-  /* Footer */
-  .footer {
-    margin-top: 40px;
-    font-size: 0.9rem;
-    color: #888;
+/* Wrapper für Button und Quelle */
+.button-wrapper {
+    display: flex;
+    flex-direction: column; /* Elemente vertikal anordnen */
+    justify-content: center;
+    align-items: center;
+    height: 50px; /* Flexible Höhe */
+    margin-top: 20px; /* Abstand zu anderen Elementen */
   }
+  
+  .hidden-button {
+    visibility: hidden; /* Button ausblenden, aber Platz beibehalten */
+  }
+  
+  /* Quellen-Text */
+  .source {
+    margin-top: 10px; /* Abstand vom Button */
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+  }
+  
+  .source a {
+    color: #007b83;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .source a:hover {
+    text-decoration: underline;
+  }
+  
+
+  
+
+    /* Footer */
+    .footer {
+        margin-top: 40px;
+        font-size: 0.9rem;
+        color: #888;
+      }
+      
   
