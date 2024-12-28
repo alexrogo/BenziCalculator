@@ -135,4 +135,15 @@ export const head: DocumentHead = {
       content: "Daily Dose",
     },
   ],
+  links: [
+    {
+      rel: "icon",
+      type: "image/x-icon",
+      href: "/favicon.ico", // Pfad zu deinem Favicon
+    },
+    {
+      rel: "apple-touch-icon",
+      href: "/favicon.ico", // Optional für iOS
+    },
+  ],
 };
