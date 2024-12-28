@@ -1,6 +1,6 @@
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { component$ } from "@builder.io/qwik";
-import ImgDailydoselogo from "./media/DailyDoseLogo.svg?jsx";
+// import ImgDailydoselogo from "./media/DailyDoseLogo.svg?jsx";
 
 export default component$(() => {
   return (
@@ -9,7 +9,12 @@ export default component$(() => {
         {/* Hero Section */}
         <header class="hero">
           {/* Icon */}
-          <ImgDailydoselogo class="logo" />
+          {/* <ImgDailydoselogo class="logo" /> */}
+          <img
+            src="/media/DailyDoseLogo.svg"
+            alt="Daily Dose Logo"
+            class="logo"
+          />
 
           {/* Text */}
           <h1 class="hero-title">Deine tägliche Dosis Wissen</h1>
