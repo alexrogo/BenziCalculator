@@ -1,0 +1,81 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #f0f9ff, #fff9db);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+
+  .logo {
+    width: 80px; /* Kleinere Breite */
+    height: auto; /* Höhe proportional zur Breite */
+    margin: 0 auto; /* Zentriert */
+  }
+  
+  .landing-container {
+    display: flex;
+    flex-direction: column; /* Elemente vertikal anordnen */
+    align-items: center; /* Zentrieren */
+    justify-content: center; /* Vertikal zentrieren */
+    text-align: center;
+    height: 100vh; /* Volle Höhe des Bildschirms */
+  }
+  
+  
+  /* Hero Section */
+  .hero {
+    margin-bottom: 30px;
+  }
+  
+  .hero-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .hero-title {
+    font-size: 1.8rem;
+    margin: 10px 0;
+    color: #007b83;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Call-to-Action Button */
+  .cta-section {
+    margin-top: 20px;
+  }
+  
+  .cta-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #ff6b35;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, background-color 0.2s;
+  }
+  
+  .cta-button:hover {
+    background-color: #e65c24;
+    transform: scale(1.05);
+  }
+  
+  /* Footer */
+  .footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
