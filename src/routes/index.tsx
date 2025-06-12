@@ -10,14 +10,14 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 export default component$(() => {
   useStylesScoped$(`
     html, body {
-      height: 100vh;
-      width: 100vw;
       margin: 0;
       padding: 0;
+      width: 100%;
+      height: 100%;
       overflow: hidden;
+      background: black;
       position: fixed;
       inset: 0;
-      background: black;
     }
     body {
       padding-top: env(safe-area-inset-top);
@@ -25,7 +25,7 @@ export default component$(() => {
       font-family: Arial, sans-serif;
     }
     canvas { display: block; position: absolute; top: 0; left: 0; z-index: 1; }
-    #startButton { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    #startButton { position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%);
       padding: 15px 30px; font-size: 1.2em; background: linear-gradient(135deg, #ff0077, #9900ff);
       color: white; border: none; border-radius: 15px; box-shadow: 0 0 20px rgba(255, 0, 150, 0.7);
       cursor: pointer; z-index: 10; }
@@ -37,6 +37,13 @@ export default component$(() => {
   `);
 
   useVisibleTask$(() => {
+    // iOS Viewport Fix
+    function fixIOSViewport() {
+      document.body.style.height = window.innerHeight + "px";
+    }
+    fixIOSViewport();
+    window.addEventListener("resize", fixIOSViewport);
+
     const startButton = document.getElementById("startButton")!;
     const overlay = document.getElementById("overlay")!;
     const success = document.getElementById("success")!;
@@ -198,6 +205,7 @@ export default component$(() => {
     });
 
     window.addEventListener("resize", () => {
+      fixIOSViewport();
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
