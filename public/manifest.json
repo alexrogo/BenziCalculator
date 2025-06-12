@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-  "name": "Daily Dose",
-  "short_name": "DailyDose",
+  "name": "Benzi Calculator",
+  "short_name": "BenziCalculator",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#fff",
