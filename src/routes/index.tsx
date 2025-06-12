@@ -87,7 +87,7 @@ export default component$(() => {
     const particles = new THREE.Points(geometry, particleMaterial);
     scene.add(particles);
 
-    let clock = new THREE.Clock();
+    const clock = new THREE.Clock();
     let angle = 0;
     let hue = 0;
     let morphing = false;
