@@ -9,17 +9,60 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
 export default component$(() => {
   useStylesScoped$(`
-    body { margin: 0; overflow: hidden; background: black; font-family: Arial, sans-serif; }
-    canvas { display: block; position: absolute; top: 0; left: 0; z-index: 1; }
-    #startButton { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-      padding: 20px 40px; font-size: 2em; background: linear-gradient(135deg, #ff0077, #9900ff);
-      color: white; border: none; border-radius: 15px; box-shadow: 0 0 20px rgba(255, 0, 150, 0.7);
-      cursor: pointer; z-index: 10; }
-    #overlay { position: absolute; top: 30px; left: 50%; transform: translateX(-50%);
-      color: white; font-size: 2.5em; z-index: 10; text-shadow: 0 0 10px rgba(255,255,255,0.8); display: none; }
-    #success { position: absolute; top: 70%; left: 50%; transform: translate(-50%, -50%);
-      font-size: 3em; text-align: center; color: #00ff88; z-index: 10;
-      text-shadow: 0 0 20px rgba(0,255,136,0.9); display: none; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      background: black;
+      font-family: Arial, sans-serif;
+    }
+    canvas {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    #startButton {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px 40px;
+      font-size: 5vw;
+      background: linear-gradient(135deg, #ff0077, #9900ff);
+      color: white;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255, 0, 150, 0.7);
+      cursor: pointer;
+      z-index: 10;
+    }
+    #overlay {
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 5vw;
+      z-index: 10;
+      text-shadow: 0 0 10px rgba(255,255,255,0.8);
+      display: none;
+    }
+    #success {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 5vw;
+      text-align: center;
+      color: #00ff88;
+      z-index: 10;
+      text-shadow: 0 0 20px rgba(0,255,136,0.9);
+      display: none;
+    }
   `);
 
   useVisibleTask$(() => {
