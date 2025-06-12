@@ -4,7 +4,7 @@ import {
   useVisibleTask$,
 } from "@builder.io/qwik";
 import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 export default component$(() => {
   useStylesScoped$(`
