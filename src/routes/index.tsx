@@ -3,6 +3,7 @@ import {
   useStylesScoped$,
   useVisibleTask$,
 } from "@builder.io/qwik";
+import { DocumentHead } from "@builder.io/qwik-city";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
@@ -207,3 +208,42 @@ export default component$(() => {
     </>
   );
 });
+
+export const head: DocumentHead = {
+  title: "Benzi Calculator - Your Cosmic Score",
+  meta: [
+    {
+      name: "description",
+      content: "Calculate your Benzi score with a touch of cosmos and madness.",
+    },
+    {
+      name: "keywords",
+      content: "Benzi, Cosmos, Fun, Penis, Randomizer, Score",
+    },
+    {
+      name: "author",
+      content: "Alexander Rogowski",
+    },
+  ],
+  links: [
+    { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+    {
+      rel: "icon",
+      href: "/web-app-manifest-192x192.png",
+      sizes: "192x192",
+      type: "image/png",
+    },
+    {
+      rel: "icon",
+      href: "/favicon-96x96.png",
+      sizes: "96x96",
+      type: "image/png",
+    },
+    {
+      rel: "apple-touch-icon",
+      href: "/apple-touch-icon.png",
+      sizes: "180x180",
+    },
+    { rel: "manifest", href: "/manifest.json" },
+  ],
+};
