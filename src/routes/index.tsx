@@ -226,24 +226,24 @@ export const head: DocumentHead = {
     },
   ],
   links: [
-    { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
     {
       rel: "icon",
-      href: "/web-app-manifest-192x192.png",
-      sizes: "192x192",
-      type: "image/png",
+      href: "/icon.svg", // Pfad zu deinem SVG-Icon
+      type: "image/svg+xml",
     },
     {
       rel: "icon",
-      href: "/favicon-96x96.png",
-      sizes: "96x96",
+      href: "/android-chrome-192x192.png", // Fallback für Browser, die SVG nicht unterstützen
       type: "image/png",
+      sizes: "192x192",
     },
     {
       rel: "apple-touch-icon",
-      href: "/apple-touch-icon.png",
-      sizes: "180x180",
+      href: "/apple-touch-icon.png", // Speziell für iOS
     },
-    { rel: "manifest", href: "/manifest.json" },
+    {
+      rel: "manifest",
+      href: "/manifest.json", // Verweis auf deine manifest.json
+    },
   ],
 };
